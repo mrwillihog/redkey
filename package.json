@@ -12,12 +12,31 @@
   },
   "keywords": [
     "redis",
-    "key"
+    "key",
+    "generator"
   ],
   "author": "Matthew Williams",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mrwillihog/redkey/issues"
   },
-  "homepage": "https://github.com/mrwillihog/redkey"
+  "homepage": "https://github.com/mrwillihog/redkey",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.0.1"
+  },
+  "jshintConfig": {
+    "quotmark": "single",
+    "unused": true,
+    "undef": true,
+    "node": true,
+    "globals": {
+      "describe": false,
+      "it": false,
+      "before": false,
+      "beforeEach": false,
+      "after": false,
+      "afterEach": false
+    }
+  }
 }
