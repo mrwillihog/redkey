@@ -1,0 +1,23 @@
+{
+  "name": "redkey",
+  "version": "0.0.1",
+  "description": "Function for generating keys to use in a Redis database",
+  "main": "redkey.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/_mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrwillihog/redkey"
+  },
+  "keywords": [
+    "redis",
+    "key"
+  ],
+  "author": "Matthew Williams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrwillihog/redkey/issues"
+  },
+  "homepage": "https://github.com/mrwillihog/redkey"
+}
