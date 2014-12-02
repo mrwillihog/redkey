@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 var defaults = {
   separator: ':',
   namespace: '',
@@ -14,13 +16,13 @@ function RedKey(opts) {
   var suffix = opts.suffix || defaults.suffix;
 
   function Generator() {
-    var argsArray = [].slice.call(arguments);
+    var words = _.flatten(arguments);
 
-    if (version) argsArray.unshift(version);
-    if (namespace) argsArray.unshift(namespace);
-    if (suffix) argsArray.push(suffix);
+    if (version) words.unshift(version);
+    if (namespace) words.unshift(namespace);
+    if (suffix) words.push(suffix);
 
-    return argsArray.join(separator);
+    return words.join(separator);
   }
 
   Generator.configure = function (opts) {

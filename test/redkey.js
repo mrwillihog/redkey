@@ -3,9 +3,28 @@ var expect = require('chai').expect;
 describe('RedKey', function () {
   it('concatanates strings into a key', function (done) {
     var redkey = require('../redkey');
+
     expect(redkey('test')).to.equal('test');
     expect(redkey('test', 'key')).to.equal('test:key');
     expect(redkey('test', 'long', 'key')).to.equal('test:long:key');
+    done();
+  });
+
+  it('accepts an array of strings', function (done) {
+    var redkey = require('../redkey');
+
+    expect(redkey(['test'])).to.equal('test');
+    expect(redkey(['test', 'key'])).to.equal('test:key');
+    expect(redkey(['test', 'long', 'key'])).to.equal('test:long:key');
+    done();
+  });
+
+  it('accepts an array as any argument', function (done) {
+    var redkey = require('../redkey');
+
+    expect(redkey(['test'])).to.equal('test');
+    expect(redkey(['test'], ['key'])).to.equal('test:key');
+    expect(redkey(['test'], ['long'], 'key')).to.equal('test:long:key');
     done();
   });
 
