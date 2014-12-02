@@ -1,6 +1,6 @@
 {
   "name": "redkey",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Function for generating keys to use in a Redis database",
   "main": "redkey.js",
   "scripts": {
